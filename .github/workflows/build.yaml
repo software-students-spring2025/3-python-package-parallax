@@ -1,0 +1,22 @@
+name: CI / CD
+on: 
+    pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+              python-version: ["3.9", "3.11"]
+        steps:
+            - uses: actions/checkout@4
+            - name: Install python, pipenv and pipfile packages
+              uses: kojoru/prepare-pipenv@1 
+            with:
+                python-version: ${{matrix.python-version}}
+        -name: Test with Pytest
+        run: |
+         pipenv install pytest
+         pipenv --venv
+         pipenv run python -m pytest
+            
