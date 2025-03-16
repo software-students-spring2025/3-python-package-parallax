@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfortune"
+version = "0.1.0"
+description = "A Tech-Themed Fortune Cookie Generator"
+readme = "README.md"
+dependencies = []
+
+[tool.setuptools]
+packages = ["pyfortune"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
