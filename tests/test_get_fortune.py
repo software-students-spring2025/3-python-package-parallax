@@ -26,6 +26,8 @@ class TestGetFortune:
         invalid_only = "internships"
         with pytest.raises(ValueError) as exc_info:
             get_fortune(invalid_only)
-        assert "Category 'internships' not found." in str(exc_info.value), f"Expect to see the error message."
-        assert "Please pick one of the existing categories:" in str(exc_info.value), f"Expect to see the list of valid categories."
+        error_text = str(exc_info.value)
+        assert f"Sorry but '{invalid_only}' is not a category." in error_text
+        assert f"Please pick on from this list:" in error_text
+
 
