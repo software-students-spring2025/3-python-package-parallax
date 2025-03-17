@@ -11,9 +11,9 @@ jobs:
             matrix:
               python-version: ["3.9", "3.11"]
         steps:
-            - uses: actions/checkout@4
+            - uses: actions/checkout@v4
             - name: Install python, pipenv and pipfile packages
-              uses: kojoru/prepare-pipenv@1 
+              uses: kojoru/prepare-pipenv@v1 
               with:
                     python-version: ${{matrix.python-version}}
             - name: Test with Pytest
