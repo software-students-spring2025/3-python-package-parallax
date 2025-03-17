@@ -1,11 +1,11 @@
 import pytest
-from Fortune_story import fortune_story
+from fortune_package.Fortune_story import fortune_story
 
-@pytest.fixture
-def sample_name():
-    return "Alice"
 
 class Tests:
+    @pytest.fixture
+    def sample_name():
+        return "Alice"
     
     def test_True(self):
         "verify that a test that always passes"
