@@ -1,5 +1,5 @@
 import pytest
-import Fortune_story
+from Fortune_story import fortune_story
 
 @pytest.fixture
 def sample_name():
@@ -15,14 +15,14 @@ class Tests:
     def test_return_length(sample_name):
         "verify that Fortune_story returns 1 story and not multiple"
 
-        result = Fortune_story(sample_name) 
+        result = fortune_story(sample_name) 
         assert isinstance(result,list), "Should return  a result from our list"
         assert len(result)== 1, "Should contain 1 story from our list"
     
 
     def test_name_story(sample_name):
         "Verify the sample_name is within the story "
-        result= Fortune_story(sample_name)
+        result= fortune_story(sample_name)
         assert sample_name in result , "the story should contain the inputted name"
     
     def test_valid_story(sample_name):
@@ -33,7 +33,7 @@ class Tests:
         f"While in the ancient Libary, {sample_name} found the ancient text of auto debugger,they opened the book and it read one line: in order to not have bugs one must not code",
         f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI"
     ]
-        result = Fortune_story(sample_name)
+        result = fortune_story(sample_name)
         assert result in valid_stories,"The returned story should be a valid option"
     def test_all_stories(sample_name):
         "Makes sure that all our stories are acceptable"
@@ -44,5 +44,5 @@ class Tests:
         f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI"
     ]
         for i in range(50):
-            result = Fortune_story(sample_name)
+            result = fortune_story(sample_name)
             assert(result in stories),f"Expected to story to be returned from stories instead it returned{result}"
