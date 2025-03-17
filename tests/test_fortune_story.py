@@ -1,10 +1,12 @@
 import pytest
 import Fortune_story
 
+@pytest.fixture
+def sample_name():
+    return "Alice"
+
 class Tests:
-    @pytest.fixture
-    def sample_name():
-        return "Alice"
+    
     def test_True(self):
         "verify that a test that always passes"
         expected = True
