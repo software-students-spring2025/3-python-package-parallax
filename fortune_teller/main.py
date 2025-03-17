@@ -1,6 +1,6 @@
 import random
 
-def rand_date_time(fortune: str) -> str:
+def rand_date_time(fortune):
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
