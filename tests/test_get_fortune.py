@@ -1,5 +1,5 @@
 import pytest
-from fortune_package.get_fortune import get_fortune
+from fortune_teller.get_fortune import get_fortune
 
 class TestGetFortune:
     @pytest.mark.parametrize("category", ["tech", "startup", "open source", "ai", "career"])
