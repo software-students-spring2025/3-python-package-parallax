@@ -23,7 +23,7 @@ jobs:
 
       - name : Install dependacy 
         run : pipenv install --dev
-              pipenv install .
+        
       - name: Testing with pytest
         run: |
           pipenv install pytest
