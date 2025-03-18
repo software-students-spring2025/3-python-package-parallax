@@ -3,17 +3,17 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyfortune"
+name = "fortune_teller"
 version = "0.1.0"
-description = "A Tech-Themed Fortune Cookie Generator"
+description = "A fun Python package that generates random fortunes with a date."
+authors = [{name = "Your Name", email = "your@email.com"}]
+license = {text = "MIT"}
 readme = "README.md"
+requires-python = ">=3.8"
 dependencies = []
 
 [tool.setuptools]
-packages = ["pyfortune"]
+packages = ["fortune_teller", "fortune_emoji"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
