@@ -16,6 +16,12 @@ jobs:
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
+      - name : Install pipenv
+        run : pip install pipenv
+
+
+      - name : Install dependacy 
+        run : pipenv install --dev
       - name: Testing with pytest
         run: |
           pipenv install pytest
