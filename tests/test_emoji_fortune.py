@@ -1,10 +1,10 @@
 # import function from main .py in final version
-from pyfortune.emoji_fortune import emoji_fortune
+from fortune_emoji.emoji_fortune import emoji_fortune
 import pytest
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..')))  # add project root into path
+# import sys
+# import os
+# sys.path.insert(0, os.path.abspath(os.path.join(
+#     os.path.dirname(__file__), '..')))  # add project root into path
 
 
 class TestEmojiFortune:
