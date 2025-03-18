@@ -1,9 +1,10 @@
+
 name: CI / CD
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: 
+    pull_request:
+        branches:
+            - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,10 +20,17 @@ jobs:
       - name : Install pipenv
         run : pip install pipenv
 
+
       - name : Install dependacy 
-        run : pipenv install -e .
+        run : |
+            pipenv install --dev
+            pipenv install .
+            pipenv run pip install -e .
+
       - name: Testing with pytest
         run: |
           pipenv install pytest
-          pipenv --venv
-          pipenv run python -m pytest
+          pipenv run python -m pytest tests/
+        env:
+          PYTHONPATH: ${{ github.workspace }} 
+    
