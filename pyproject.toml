@@ -15,5 +15,6 @@ dependencies = []
 [tool.setuptools]
 packages = ["fortune_teller", "fortune_emoji"]
 
+
 [project.optional-dependencies]
 dev = ["pytest"]
