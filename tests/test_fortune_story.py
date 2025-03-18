@@ -1,5 +1,5 @@
 import pytest
-import fortune_package.fortune_story as fortune_story
+from fortune_package.fortune_stories import fortune_story
 #import Fortune_story
 
 
@@ -17,14 +17,14 @@ class Tests:
     def test_return_length(self,sample_name):
         "verify that Fortune_story returns 1 story and not multiple"
 
-        result = fortune_story.fortune_story(sample_name) 
+        result = fortune_story(sample_name) 
         assert isinstance(result,str), "Should return  a result from our list instead"
         #assert len(result)== 1, "Should contain 1 story from our list"
     
 
     def test_name_story(self,sample_name):
         "Verify the sample_name is within the story "
-        result= fortune_story.fortune_story(sample_name)
+        result= fortune_story(sample_name)
         assert sample_name in result , f"the story should contain the inputted name {result}"
     
     def test_valid_story(self,sample_name):
@@ -35,7 +35,7 @@ class Tests:
         f"While in the ancient Libary, {sample_name} found the ancient text of auto debugger,they opened the book and it read one line: in order to not have bugs one must not code",
         f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI"
     ]
-        result = fortune_story.fortune_story(sample_name)
+        result = fortune_story(sample_name)
         assert result in valid_stories,"The returned story should be a valid option"
     def test_all_stories(self,sample_name):
         "Makes sure that all our stories are acceptable"
@@ -46,5 +46,5 @@ class Tests:
         f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI"
     ]
         for i in range(50):
-            result = fortune_story.fortune_story(sample_name)
+            result = fortune_story(sample_name)
             assert(result in stories),f"Expected to story to be returned from stories instead it returned{result}"
