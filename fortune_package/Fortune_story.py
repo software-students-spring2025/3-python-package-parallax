@@ -6,4 +6,4 @@ def fortune_story(name):
         f"While in the ancient Libary, {name} found the ancient text of auto debugger,they opened the book and it read one line: in order to not have bugs one must not code",
         f"{name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {name} was now the Grand AI"
     ]
-    return random.choices(stories)
+    return random.choice(stories)
