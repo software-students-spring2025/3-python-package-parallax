@@ -5,7 +5,7 @@
 A small Python package to make your day just a bit brighter while coding! Test your luck and explore the many fortunes we've included. If you're lucky (or unlucky), the fortune you receive might just come true.
 
 ## PyPI Link
-[fortune-package](Insert PyPI link here)
+[fortune-package2607555](https://pypi.org/project/fortune-teller2607555/0.1.0/)
 
 ## Installation & Setup
 
@@ -19,19 +19,19 @@ pipenv shell
 ### Importing fortune_package
 To use `fortune_package` in your code, import it as follows:
 ```python
-from fortune_emoji.function_name import function_name
+from fortune_package.function_name import function_name
 ```
 
 ## Usage
 Below is an example of how to use `fortune_package`:
 ```python
-from fortune_emoji import get_fortune
+from fortune_package import get_fortune
 
 fortune = get_fortune()
 print(f"Your fortune: {fortune}")
 ```
 
-For a complete example of all functions, check out `test.py`.
+For a complete example of all functions, check out [example.py](https://github.com/software-students-spring2025/3-python-package-parallax/blob/main/example.py).
 
 ## Contribution Guidelines
 We welcome contributions! If you'd like to contribute:
