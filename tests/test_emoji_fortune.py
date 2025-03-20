@@ -1,5 +1,5 @@
 # import function from main .py in final version
-from fortune_emoji.emoji_fortune import emoji_fortune
+from fortune_teller.emoji_fortune import emoji_fortune
 import pytest
 # import sys
 # import os

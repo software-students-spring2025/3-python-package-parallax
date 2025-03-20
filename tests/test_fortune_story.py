@@ -1,5 +1,5 @@
 import pytest
-from fortune_package.fortune_stories import fortune_story
+from fortune_teller.fortune_stories import fortune_story
 #import Fortune_story
 
 

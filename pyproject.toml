@@ -13,7 +13,7 @@ requires-python = ">=3.8"
 dependencies = []
 
 [tool.setuptools]
-packages = ["fortune_teller", "fortune_emoji"]
+packages = ["fortune_teller"]
 
 
 [project.optional-dependencies]

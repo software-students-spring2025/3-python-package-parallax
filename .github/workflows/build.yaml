@@ -11,6 +11,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.11"]
+    
     steps:
       - uses: actions/checkout@v4
       - name: Install Python, pipenv and Pipfile packages
@@ -23,8 +24,7 @@ jobs:
 
       - name : Install dependacy 
         run : |
-            pipenv install --dev
-            pipenv install .
+            pipenv sync --dev
             pipenv run pip install -e .
 
       - name: Testing with pytest
@@ -33,4 +33,21 @@ jobs:
           pipenv run python -m pytest tests/
         env:
           PYTHONPATH: ${{ github.workspace }} 
-    
+  deliver:
+            needs: [build]
+            runs-on: ubuntu-latest
+            timeout-minutes: 5
+           
+            steps:
+              - uses: actions/checkout@v4
+              - name: Install Python, pipenv and Pipfile packages
+                uses: kojoru/prepare-pipenv@v1
+              - name: Build package
+                run: |
+                  pipenv install build
+                  pipenv run python -m build .
+              - name: Publish to PyPI test server
+                uses: pypa/gh-action-pypi-publish@release/v1
+                with:
+                  name: built-package
+                  path: dist/
