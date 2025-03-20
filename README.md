@@ -14,6 +14,7 @@ To install the required dependencies and set up a virtual environment, use:
 ```sh
 pipenv install
 pipenv shell
+pip install fortune-teller2607555==0.1.0
 ```
 
 ### Importing fortune_package
