@@ -1,6 +1,6 @@
 import pytest
 import re
-from fortune_teller.main import rand_date_time
+from fortune_teller.date_time import rand_date_time
 
 class TestRandDateTime:
     @pytest.fixture

@@ -1,6 +1,7 @@
-from fortune_teller.main import rand_date_time # import functions from respective modules
-from fortune_emoji.emoji_fortune import emoji_fortune
-from fortune_package.fortune_stories import fortune_story
+# import functions from respective modules
+from fortune_teller.date_time import rand_date_time 
+from fortune_teller.emoji_fortune import emoji_fortune
+from fortune_teller.fortune_stories import fortune_story
 from fortune_teller.get_fortune import get_fortune
 
 def main():
