@@ -23,7 +23,7 @@ jobs:
 
       - name : Install dependacy 
         run : |
-            pipenv install --dev
+            pipenv install --dev --deploy
             pipenv install .
             pipenv run pip install -e .
 
