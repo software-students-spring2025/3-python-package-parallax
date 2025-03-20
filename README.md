@@ -31,7 +31,7 @@ fortune = get_fortune()
 print(f"Your fortune: {fortune}")
 ```
 
-For a complete example of all functions, check out [this example program](Insert example program link here).
+For a complete example of all functions, check out `test.py`.
 
 ## Contribution Guidelines
 We welcome contributions! If you'd like to contribute:
