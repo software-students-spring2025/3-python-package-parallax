@@ -17,17 +17,17 @@ pipenv shell
 ```
 
 ### Importing fortune_package
-To use `fortune_package` in your code, import it as follows:
+To use `fortune_teller` in your code, import it as follows:
 ```python
-from fortune_package.function_name import function_name
+from fortune_teller.file_name import function_name
 ```
 
 ## Usage
-Below is an example of how to use `fortune_package`:
+Below is an example of how to use `fortune_teller`:
 ```python
-from fortune_package import get_fortune
+from fortune_teller.get_fortune import get_fortune
 
-fortune = get_fortune()
+fortune_returned = get_fortune("tech")
 print(f"Your fortune: {fortune}")
 ```
 
