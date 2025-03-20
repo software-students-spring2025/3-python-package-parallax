@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "14eab4b8e65a9b164b897fcbf778952f86b840e7839f1e9e69146da4127e6f65"
+            "sha256": "f15deab3295ca02d310665bf61ebeede9f3bb86445faeb538d7172971d7a10c6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -137,6 +137,10 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==0.21.2"
+        },
+        "fortune-teller": {
+            "editable": true,
+            "file": "."
         },
         "id": {
             "hashes": [
