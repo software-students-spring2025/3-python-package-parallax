@@ -6,7 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "fortune_teller"
 version = "0.1.0"
 description = "A fun Python package that generates random fortunes with a date."
-authors = [{name = "Your Name", email = "your@email.com"}]
+authors = [    
+    { name = "Brian" },
+    { name = "Naz" },
+    { name = "Jibril" },
+    { name = "Polina" }]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.8"
