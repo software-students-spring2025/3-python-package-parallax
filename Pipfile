@@ -3,6 +3,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[packages]
+fortune_teller-0.1.0 = {file = ".", editable = true}
+
 [dev-packages]
 pytest = "*"
 build = "*"
