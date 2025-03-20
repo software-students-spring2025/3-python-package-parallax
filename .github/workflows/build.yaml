@@ -11,8 +11,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.11"]
-    env:
-      PIPENV_IGNORE_VIRTUALENVS: 1
+    
     steps:
       - uses: actions/checkout@v4
       - name: Install Python, pipenv and Pipfile packages
@@ -21,18 +20,13 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name : Install pipenv
         run : pip install pipenv
-      - name: Ensure Clean Dependency Setup
-        run: |
-          pipenv --rm || true  # Remove any pre-existing environment
-          pipenv install --dev --skip-lock  # Install without locking
-      - name: Debug Installed Dependencies
-        run: pipenv graph  # Helps troubleshoot dependency issues
 
-      #- name : Install dependacy 
-      #  run : |
-      #      pipenv install --dev --deploy
-      #      pipenv install .
-      #      pipenv run pip install -e .
+
+      - name : Install dependacy 
+        run : |
+            pipenv install --dev --deploy
+            pipenv install .
+            pipenv run pip install -e .
 
       - name: Testing with pytest
         run: |
@@ -44,8 +38,7 @@ jobs:
             needs: [build]
             runs-on: ubuntu-latest
             timeout-minutes: 5
-            env:
-               PIPENV_IGNORE_VIRTUALENVS: 1
+           
             steps:
               - uses: actions/checkout@v4
               - name: Install Python, pipenv and Pipfile packages
