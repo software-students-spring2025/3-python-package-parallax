@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fortune_teller = {file = ".", editable = true}
+fortune-teller2607555 = {file = ".", editable = true}
 twine = "*"
 
 [dev-packages]
