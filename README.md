@@ -28,7 +28,7 @@ Below is an example of how to use `fortune_teller`:
 ```python
 from fortune_teller.get_fortune import get_fortune
 
-fortune_returned = get_fortune("tech")
+fortune = get_fortune("tech")
 print(f"Your fortune: {fortune}")
 ```
 
