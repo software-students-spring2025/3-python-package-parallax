@@ -13,11 +13,11 @@ authors = [
     { name = "Polina" }]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = []
 
 [tool.setuptools]
-packages = ["fortune_teller"]
+packages = ["fortune_teller2607555"]
 
 
 [project.optional-dependencies]

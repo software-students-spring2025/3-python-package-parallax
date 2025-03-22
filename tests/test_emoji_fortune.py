@@ -1,5 +1,5 @@
 # import function from main .py in final version
-from fortune_teller.emoji_fortune import emoji_fortune
+from fortune_teller.mood_fortune import mood_fortune
 import pytest
 # import sys
 # import os
@@ -58,37 +58,37 @@ class TestEmojiFortune:
 
     def test_returns_string(self):
         """Verify that emoji_fortune always returns a string."""
-        result = emoji_fortune()
+        result = mood_fortune()
         assert isinstance(
             result, str), "emoji_fortune() should return a string."
 
     def test_valid_fortune(self, fortune_dict):
         """Verify that the returned fortune is within the predefined fortunes."""
         all_fortunes = sum(fortune_dict.values(), [])
-        result = emoji_fortune()
+        result = mood_fortune()
         assert result in all_fortunes, f"Returned fortune should be a valid option, got {result}"
 
     @pytest.mark.parametrize("mood", ["positive", "funny", "cursed", "motivational"])
     def test_mood_fortune(self, mood, fortune_dict):
         """Verify that emoji_fortune(mood) returns a fortune from the correct category."""
-        result = emoji_fortune(mood)
+        result = mood_fortune(mood)
         assert result in fortune_dict[mood], f"Expected a {mood} fortune, but got: {result}."
 
     def test_invalid_mood(self, fortune_dict):
         """Verify that an invalid mood still returns a valid fortune from any category."""
-        result = emoji_fortune("invalid_mood")
+        result = mood_fortune("invalid_mood")
         all_fortunes = sum(fortune_dict.values(), [])
         assert result in all_fortunes, f"Expected a valid fortune, but got: {result}."
 
     def test_randomness(self):
         """Ensure the function returns different fortunes over multiple calls."""
-        results = {emoji_fortune() for _ in range(10)}
+        results = {mood_fortune() for _ in range(10)}
         assert len(
             results) > 1, "emoji_fortune() should return different results over multiple calls"
 
     @pytest.mark.parametrize("mood", ["positive", "funny", "cursed", "motivational"])
     def test_all_moods_have_variety(self, mood, fortune_dict):
         """Ensure that multiple calls for each mood return different fortunes."""  # i.e. make sure randomization happens
-        results = {emoji_fortune(mood) for _ in range(10)}
+        results = {mood_fortune(mood) for _ in range(10)}
         assert len(
             results) > 1, f"emoji_fortune('{mood}') should return different fortunes."

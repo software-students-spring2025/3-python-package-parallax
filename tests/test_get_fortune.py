@@ -1,11 +1,11 @@
 import pytest
-from fortune_teller.get_fortune import get_fortune
+from fortune_teller.cs_fortune import cs_fortune
 
 class TestGetFortune:
     @pytest.mark.parametrize("category", ["tech", "startup", "open source", "ai", "career"])
     def test_returns_str(self, category):
         """Check if the value that is returned is a string."""
-        fortune_returned = get_fortune(category)
+        fortune_returned = cs_fortune(category)
         assert isinstance(fortune_returned, str), f"String is expected here."
 
     def test_valid_tech(self):
@@ -18,14 +18,14 @@ class TestGetFortune:
             "A segfault in your future? Fear not, for logs will guide you.",
             "You will spend more time reading logs than writing code."
         }
-        fortune_returned = get_fortune("tech")
+        fortune_returned = cs_fortune("tech")
         assert fortune_returned in valid_only_tech, (f"Valid fortunes are {valid_only_tech}, got {fortune_returned}")
     
     def test_value_error_raise(self):
         """Check if an invalid category raises a Valueerror and prompts the user to pick a valid one instead."""
         invalid_only = "internships"
         with pytest.raises(ValueError) as exc_info:
-            get_fortune(invalid_only)
+            cs_fortune(invalid_only)
         error_text = str(exc_info.value)
         assert f"Sorry but '{invalid_only}' is not a category." in error_text
         assert f"Please pick on from this list:" in error_text
@@ -33,7 +33,7 @@ class TestGetFortune:
     
     def test_randomness(self):
         """Check for randomness: check if multiple calls for a given valid category return different fortunes."""
-        fortune_returned = {get_fortune("tech") for _ in range(10)}
+        fortune_returned = {cs_fortune("tech") for _ in range(10)}
         assert len(fortune_returned) > 1, "Expected random fortunes every single time, but got the same fortune each time instead."
 
     @pytest.mark.parametrize("category, valid_fortunes", [
@@ -69,7 +69,7 @@ class TestGetFortune:
 
     def test_valid_only_fortunes(self, category, valid_fortunes):
         """For each valid category, check if the returned fortune is one of the expected fortunes."""
-        fortune_returned = get_fortune(category)
+        fortune_returned = cs_fortune(category)
         assert fortune_returned in valid_fortunes, f"For category '{category}', the fortune '{fortune_returned}' is not valid."
     
 
