@@ -30,32 +30,28 @@ class Tests:
     def test_valid_story(self,sample_name):
         "What is returned should be within our list of stories"
         valid_stories= [
-        f"{sample_name} woke up on day to find out that his body was taken over by AI. When he thought of something his body would code it in an instance, but no matter what he did there always bugs",
-        f"The universe opens and {sample_name} sees the infinte possiblites of error in his code. After looking through millions of possiblites {sample_name} found the one universe where they fixed their code",
+         f"{sample_name} will wake up one day to find out that his body was taken over by AI. When {sample_name} thought of something, {sample_name}'s body would code it in an instance, but no matter what {sample_name} did, there were always bugs...",
+        f"The universe will open and {sample_name} will see the infinte possiblites of error in their code. After looking through millions of possiblites, {sample_name} finally will find the one universe where they will fix their code! Yay!",
         f"While in the ancient Libary, {sample_name} found the ancient text of auto debugger,they opened the book and it read one line: in order to not have bugs one must not code",
-        f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI",
-         f"{sample_name}  travled through the broken world filled with AI and robots they were the last savior of the World they were the last software engineer",
-        f"{sample_name} spent many sleepless nights looking for bugs in their code until they noticed they were the bug in the code",
-        f"{sample_name} was on a plane flying and it broke apart mid flight, but with their coding skills they hackedd into the world and teleprted to their destinnation",
-        f"{sample_name} was on their last leg breathing heavy, but they couldnt give up everyone was counting on {sample_name} and they mereged the pull request",
-        f"{sample_name} was fighting against the robot empire and beat them by saying the forbidden digit '1' ",
-        f"{sample_name} broke their computer and jumped in to debug their code and was never seen again" 
+        f"{sample_name} will search far and wide in order to find the Grand AI that would save the world. After finding it, the world will turn into binary 1s and 0s, and {sample_name} will become the Grand AI...spooky.",
+        f"{sample_name} will travel through the broken world filled with AI and robots. {sample_name} will be the last savior of the World while also being the last software engineer..kinda cool ngl.",
+        f"{sample_name} will spend many sleepless nights looking for bugs in their code until {sample_name} will finally notice they were the bug in the code..kafkaesque? You bet!",
+        f"{sample_name} will fight against the robot empire and beat them by saying the forbidden digit '1'!",
+        f"{sample_name} will break their computer by jumoing inside of it to debug their code and will never be seen again..whaaaaaaaat" 
     ]
         result = fortune_story(sample_name)
         assert result in valid_stories,"The returned story should be a valid option"
     def test_all_stories(self,sample_name):
         "Makes sure that all our stories are acceptable"
         stories= [
-        f"{sample_name} woke up on day to find out that his body was taken over by AI. When he thought of something his body would code it in an instance, but no matter what he did there always bugs",
-        f"The universe opens and {sample_name} sees the infinte possiblites of error in his code. After looking through millions of possiblites {sample_name} found the one universe where they fixed their code",
+          f"{sample_name} will wake up one day to find out that his body was taken over by AI. When {sample_name} thought of something, {sample_name}'s body would code it in an instance, but no matter what {sample_name} did, there were always bugs...",
+        f"The universe will open and {sample_name} will see the infinte possiblites of error in their code. After looking through millions of possiblites, {sample_name} finally will find the one universe where they will fix their code! Yay!",
         f"While in the ancient Libary, {sample_name} found the ancient text of auto debugger,they opened the book and it read one line: in order to not have bugs one must not code",
-        f"{sample_name} searched far and wide in order to find the Grand AI that would save the world. After finding it the world turned into 1s and 0s and {sample_name} was now the Grand AI",
-         f"{sample_name}  travled through the broken world filled with AI and robots they were the last savior of the World they were the last software engineer",
-        f"{sample_name} spent many sleepless nights looking for bugs in their code until they noticed they were the bug in the code",
-        f"{sample_name} was on a plane flying and it broke apart mid flight, but with their coding skills they hackedd into the world and teleprted to their destinnation",
-        f"{sample_name} was on their last leg breathing heavy, but they couldnt give up everyone was counting on {sample_name} and they mereged the pull request",
-        f"{sample_name} was fighting against the robot empire and beat them by saying the forbidden digit '1' ",
-        f"{sample_name} broke their computer and jumped in to debug their code and was never seen again" 
+        f"{sample_name} will search far and wide in order to find the Grand AI that would save the world. After finding it, the world will turn into binary 1s and 0s, and {sample_name} will become the Grand AI...spooky.",
+        f"{sample_name} will travel through the broken world filled with AI and robots. {sample_name} will be the last savior of the World while also being the last software engineer..kinda cool ngl.",
+        f"{sample_name} will spend many sleepless nights looking for bugs in their code until {sample_name} will finally notice they were the bug in the code..kafkaesque? You bet!",
+        f"{sample_name} will fight against the robot empire and beat them by saying the forbidden digit '1'!",
+        f"{sample_name} will break their computer by jumoing inside of it to debug their code and will never be seen again..whaaaaaaaat" 
     ]
         for i in range(50):
             result = fortune_story(sample_name)
