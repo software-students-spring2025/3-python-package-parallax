@@ -32,10 +32,8 @@ def cs_fortune(category: str = "random") -> str:
         ]
     }
 
-    if category not in fortunes:
-        valid_only = ", ".join(fortunes.keys())
-        raise ValueError(
-            f"OOps: Sorry but '{category}' is not a category."
-            f"Please pick on from this list: {valid_only}."
-        )
-    return random.choice(fortunes[category])
+    if category in fortunes:
+        return random.choice(fortunes[category])
+    else:
+        return (f"Oops: '{category}' is not from our list ( • ᴖ • ｡)"
+            f"Please pick from this list of moods next time you decide to choose this function: tech, startup, open source, ai, career.")

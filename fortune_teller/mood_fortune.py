@@ -43,5 +43,5 @@ def mood_fortune(mood: str = "random") -> str:
     if mood in fortunes:
         return random.choice(fortunes[mood])
     else:
-        return (f"Error: '{mood}' is not a valid mood.\n"
-            f"Please pick from this list of moods: positive, funny, cursed, motivational.")
+        return (f"Oops: '{mood}' is not from our list ( • ᴖ • ｡)"
+            f"Please pick from this list of moods next time you decide to choose this function: positive, funny, cursed, motivational.")
