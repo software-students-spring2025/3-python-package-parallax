@@ -52,15 +52,17 @@ def print_fortune_in_cookie(fortune_text: str) -> None:
 
 def main():
 
-    
+    print("Welcome to the ⊹₊⟡⋆Fortune Teller⊹₊⟡⋆")
+    print("\nTry your luck today with one of the following fortune functions:\n")
     while True:
         print("\n")
-        print("Welcome to the ⊹₊⟡⋆Fortune Teller⊹₊⟡⋆")
-        print("\nTry your luck today with one of the following fortune functions:\n")
+        #print("Welcome to the ⊹₊⟡⋆Fortune Teller⊹₊⟡⋆")
+        #print("\nTry your luck today with one of the following fortune functions:\n")
         print("  1. mood_fortune (receive fortunes based on your mood) ૮ ˶ᵔ ᵕ ᵔ˶ ა")
         print("  2. fortune_story (receive personalized story fortunes) (˶ᵔ ᵕ ᵔ˶)")
         print("  3. cs_fortune (receive fortunes based on a computer science topic) ٩(ˊᗜˋ*)و ♡")
         print("  4. Quit ૮(˶╥︿╥)ა")
+        print("\n")
         
         choice = input("\nWhich fortune function would you like to use? Enter 1, 2, 3, or 4: ").strip()
         
@@ -74,7 +76,7 @@ def main():
             print("\nGoodbye for now, but remember: luck waits for no one!")
             sys.exit(0)
         else:
-            print("\nOops, invalid choice. Please enter 1, 2, 3, or 4.")
+            print("\nOops, invalid choice ( • ᴖ • ｡) Please enter 1, 2, 3, or 4.")
 
 def handle_mood_fortune():
     """
