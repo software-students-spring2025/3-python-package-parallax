@@ -5,7 +5,7 @@
 A small Python package to make your day just a bit brighter while coding! Test your luck and explore the many fortunes we've included. If you're lucky (or unlucky), the fortune you receive might just come true.
 
 ## PyPI Link
-[fortune-package2607555](https://pypi.org/project/fortune-teller2607555/)
+[fortune-package2607555](https://pypi.org/project/fortune-teller2607555/0.1.1/)
 
 ## Installation & Setup
 
