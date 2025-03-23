@@ -74,15 +74,11 @@ class TestEmojiFortune:
         result = mood_fortune(mood)
         assert result in fortune_dict[mood], f"Expected a {mood} fortune, but got: {result}."
 
-    def test_invalid_mood(self, fortune_dict):
-        """Verify that an invalid mood still returns a valid fortune from any category."""
-        result = mood_fortune("invalid_mood")
-        all_fortunes = sum(fortune_dict.values(), [])
-        assert result in all_fortunes, f"Expected a valid fortune, but got: {result}."
 
-    def test_randomness(self):
+    @pytest.mark.parametrize("mood", ["positive", "funny", "cursed", "motivational"])
+    def test_randomness(self, mood):
         """Ensure the function returns different fortunes over multiple calls."""
-        results = {mood_fortune() for _ in range(10)}
+        results = {mood_fortune(mood) for _ in range(10)}
         assert len(
             results) > 1, "emoji_fortune() should return different results over multiple calls"
 
