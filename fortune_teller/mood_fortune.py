@@ -1,6 +1,6 @@
 import random
 
-def emoji_fortune(mood: str = "random") -> str:
+def mood_fortune(mood: str = "positive") -> str:
     fortunes = {
         "positive": [
             "Your next 🏗️ `build` will succeed on the first try. 🚀",
@@ -40,11 +40,8 @@ def emoji_fortune(mood: str = "random") -> str:
         ]
     }
 
-    # Return a fortune from the requested mood, or pick randomly if invalid
     if mood in fortunes:
         return random.choice(fortunes[mood])
     else:
-        all_fortunes = sum(fortunes.values(), [])  # Flatten list
-        return random.choice(all_fortunes)
-
-# print(emoji_fortune("motivational"))
+        return (f"Oops: '{mood}' is not from our list ( • ᴖ • ｡)"
+            f"Please pick from this list of moods next time you decide to choose this function: positive, funny, cursed, motivational.")
