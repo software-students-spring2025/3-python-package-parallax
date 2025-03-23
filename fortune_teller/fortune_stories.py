@@ -1,5 +1,9 @@
 import random 
 def fortune_story(name):
+
+    if not name.strip():
+        return "Oops: You must provide a valid name. It cannot be empty!"
+
     stories= [
         f"{name} will wake up one day to find out that their body was taken over by AI. When {name} thought of something, {name}'s body would code it in an instance, but no matter what {name} did, there were always bugs...",
         f"The universe will open and {name} will see the infinte possiblites of error in their code. After looking through millions of possiblites, {name} finally will find the one universe where they will fix their code! Yay!",
