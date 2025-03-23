@@ -1,6 +1,6 @@
 import random
 
-def mood_fortune(mood: str = "random") -> str:
+def mood_fortune(mood: str = "positive") -> str:
     fortunes = {
         "positive": [
             "Your next 🏗️ `build` will succeed on the first try. 🚀",
