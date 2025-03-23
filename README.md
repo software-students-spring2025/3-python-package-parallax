@@ -5,7 +5,7 @@
 A small Python package to make your day just a bit brighter while coding! Test your luck and explore the many fortunes we've included. If you're lucky (or unlucky), the fortune you receive might just come true.
 
 ## PyPI Link
-[fortune-package2607555](https://pypi.org/project/fortune-teller2607555/0.1.0/)
+[fortune-package2607555](https://pypi.org/project/fortune-teller2607555/)
 
 ## Installation & Setup
 
@@ -26,13 +26,13 @@ from fortune_teller.file_name import function_name
 ## Usage
 Below is an example of how to use `fortune_teller`:
 ```python
-from fortune_teller.get_fortune import get_fortune
+from fortune_teller.cs_fortune import cs_fortune
 
-fortune = get_fortune("tech")
+fortune = cs_fortune("tech")
 print(f"Your fortune: {fortune}")
 ```
 
-For a complete example of all functions, check out [example.py](https://github.com/software-students-spring2025/3-python-package-parallax/blob/main/example.py).
+For a complete example of all functions, check out [get_started.py](https://github.com/software-students-spring2025/3-python-package-parallax/blob/main/fortune_teller/get_started.py).
 
 ## Contribution Guidelines
 We welcome contributions! If you'd like to contribute:
