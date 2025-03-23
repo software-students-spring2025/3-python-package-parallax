@@ -23,7 +23,7 @@ To install the required dependencies and set up a virtual environment:
     ```
 3. **Install our fortune-teller package**:
     ```bash
-    pip install fortune-teller2607555==0.1.0
+    pip install fortune-teller2607555==0.1.1
     ```
 
 ## Overview of Provided Functions

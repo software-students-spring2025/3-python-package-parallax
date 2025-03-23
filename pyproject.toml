@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fortune-teller2607555"
-version = "0.1.0"
+version = "0.1.1"
 description = "A fun Python package that generates random fortunes with a date."
 authors = [    
     { name = "Brian" },
